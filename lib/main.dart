@@ -5,6 +5,7 @@ import 'Controller/theme_controller.dart';
 import 'screens/Homepage.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
   runApp(MyApp());

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class DemofieldController extends GetxController{
- final loanAmountController = TextEditingController();
+class DemofieldController extends GetxController {
+  final loanAmountController = TextEditingController();
   final interestRateController = TextEditingController();
   final yearsController = TextEditingController();
   final monthsController = TextEditingController();
@@ -34,7 +34,8 @@ class DemofieldController extends GetxController{
     } else if (double.tryParse(interestRateController.text) == null) {
       interestRateError.value = 'Please enter a valid number';
       isValid = false;
-    } else if (double.parse(interestRateController.text) <= 0 || double.parse(interestRateController.text) >= 100) {
+    } else if (double.parse(interestRateController.text) <= 0 ||
+        double.parse(interestRateController.text) >= 100) {
       interestRateError.value = 'Interest rate must be between 0 and 100';
       isValid = false;
     } else {
@@ -60,7 +61,8 @@ class DemofieldController extends GetxController{
     } else if (int.tryParse(monthsController.text) == null) {
       monthsError.value = 'Please enter a valid number';
       isValid = false;
-    } else if (int.parse(monthsController.text) < 0 || int.parse(monthsController.text) > 11) {
+    } else if (int.parse(monthsController.text) < 0 ||
+        int.parse(monthsController.text) > 11) {
       monthsError.value = 'Number of months must be between 0 and 11';
       isValid = false;
     } else {
@@ -79,7 +81,8 @@ class DemofieldController extends GetxController{
 
       final totalMonths = (years * 12) + months;
 
-      Get.snackbar('Success', 'Total loan period: $totalMonths months');
+      Get.snackbar('Success',
+          'Total loan period: $totalMonths months for $loanAmount amount at rate $interestRate');
     }
   }
 
