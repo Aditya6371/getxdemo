@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controller/counter_controller.dart';
-// import '../resources/Color.dart';
 
 class Counterscreen extends StatefulWidget {
   final String title;
