@@ -2,6 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxdemo/screens/Login.dart';
+import 'package:getxdemo/screens/UserListScreen.dart';
 import '../screens/Image_picker.dart';
 import '../screens/CounterScreen.dart';
 import '../resources/Color.dart';
@@ -207,6 +209,20 @@ class HomePage extends StatelessWidget {
                 Get.to(const TestFieldScreen());
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.login),
+              title: const Text("Login"),
+              onTap: () {
+                Get.to(const LoginScreen());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.supervised_user_circle),
+              title: const Text("User List From Api"),
+              onTap: () {
+                Get.to(const UserListScreen());
+              },
+            )
           ],
         ),
       ),
