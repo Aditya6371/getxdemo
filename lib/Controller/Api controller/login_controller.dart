@@ -3,6 +3,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxdemo/global.dart';
 import 'package:http/http.dart';
 
 class LoginController extends GetxController {
@@ -14,7 +15,7 @@ class LoginController extends GetxController {
   loginApiCall() async {
     isloading.value = true;
     try {
-      final respone = await post(Uri.parse('https://reqres.in/api/login'),
+      final respone = await post(Uri.parse(ApiConstant.UserLoginUrl),
           body: {
             'email': emailController.value.text,
             'password': passcontroller.value.text
