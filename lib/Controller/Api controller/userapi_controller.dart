@@ -1,9 +1,9 @@
 import 'dart:developer';
 
 import 'package:get/get.dart';
-import 'package:getxdemo/api/api.dart';
-import 'package:getxdemo/global.dart';
-import 'package:getxdemo/model/userModel.dart';
+import '/api/api.dart';
+import '/global.dart';
+import '/model/userModel.dart';
 
 class userApiController extends GetxController {
   final RxList<Data> userData = <Data>[].obs;

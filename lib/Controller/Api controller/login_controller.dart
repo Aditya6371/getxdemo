@@ -3,7 +3,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/global.dart';
+import '/global.dart';
 import 'package:http/http.dart';
 
 class LoginController extends GetxController {

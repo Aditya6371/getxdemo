@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/Controller/slider_controller.dart';
-import 'package:getxdemo/Controller/switch_controller.dart';
+import '../Controller/slider_controller.dart';
+import '../Controller/switch_controller.dart';
 
 class SliderScreen extends StatefulWidget {
   const SliderScreen({super.key});

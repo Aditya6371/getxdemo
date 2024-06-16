@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/Controller/demoField_controller.dart';
+import '../Controller/demoField_controller.dart';
 
 class TestFieldScreen extends StatefulWidget {
   const TestFieldScreen({super.key});

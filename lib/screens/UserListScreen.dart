@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxdemo/Controller/Api%20controller/userapi_controller.dart';
+import '../Controller/Api%20controller/userapi_controller.dart';
 
 import '../model/userModel.dart';
 
