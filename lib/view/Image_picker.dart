@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Controller/imagePicker_controller.dart';
-import '../resources/Color.dart';
+import '../res/Color.dart';
 
 class ImagePicker extends StatelessWidget {
   final ImagePickerController controller = Get.put(ImagePickerController());

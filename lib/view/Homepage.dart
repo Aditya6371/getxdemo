@@ -2,12 +2,12 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '/screens/Login.dart';
-import '/screens/UserListScreen.dart';
-import '../screens/Image_picker.dart';
-import '../screens/CounterScreen.dart';
-import '../resources/Color.dart';
-import '../screens/slider.dart';
+import 'Login.dart';
+import 'UserListScreen.dart';
+import 'Image_picker.dart';
+import 'CounterScreen.dart';
+import '../res/Color.dart';
+import 'slider.dart';
 import '../Controller/theme_controller.dart';
 import 'TextFieldScreen.dart';
 

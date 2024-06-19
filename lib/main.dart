@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'Controller/theme_controller.dart';
-import 'screens/Homepage.dart';
+import 'view/Homepage.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
