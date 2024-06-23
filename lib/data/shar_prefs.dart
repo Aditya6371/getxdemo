@@ -8,13 +8,13 @@ class SharedPref {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
     switch (value.runtimeType) {
-      case bool:
+      case const (bool):
         return await prefs.setBool(key, value);
-      case double:
+      case const (double):
         return await prefs.setDouble(key, value);
-      case int:
+      case const (int):
         return await prefs.setInt(key, value);
-      case String:
+      case const (String):
         return await prefs.setString(key, value);
       case const (List<String>):
         return await prefs.setStringList(key, value);
