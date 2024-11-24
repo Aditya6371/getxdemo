@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll with Active Class</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Navigation Menu */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .menu a.active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .menu a:hover {
+            background-color: #777;
+        }
+
+        /* Sections */
+        .section {
+            height: 100vh;
+            padding: 50px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #f4f4f4;
+        }
+
+        .section:nth-child(even) {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <div class="menu">
+        <a href="#section1" class="menu-item">Section 1</a>
+        <a href="#section2" class="menu-item">Section 2</a>
+        <a href="#section3" class="menu-item">Section 3</a>
+        <a href="#section4" class="menu-item">Section 4</a>
+    </div>
+
+    <!-- Sections -->
+    <div id="section1" class="section">Section 1</div>
+    <div id="section2" class="section">Section 2</div>
+    <div id="section3" class="section">Section 3</div>
+    <div id="section4" class="section">Section 4</div>
+
+    <script>
+        $(document).ready(function () {
+            // Smooth Scrolling
+            $('.menu a').on('click', function (e) {
+                e.preventDefault();
+                const targetId = $(this).attr('href');
+                const targetSection = $(targetId);
+
+                // Smooth scroll to the section
+                $('html, body').animate({
+                    scrollTop: targetSection.offset().top - 50 // Adjust for the fixed menu height
+                }, 800); // Duration in milliseconds
+
+                // Update the active class
+                $('.menu a').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            // Highlight Active Menu Item on Scroll
+            $(window).on('scroll', function () {
+                const scrollPosition = $(window).scrollTop();
+                $('.section').each(function () {
+                    const sectionTop = $(this).offset().top - 60; // Adjust for the fixed menu height
+                    const sectionHeight = $(this).outerHeight();
+                    const sectionId = $(this).attr('id');
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        $('.menu a').removeClass('active');
+                        $(`.menu a[href="#${sectionId}"]`).addClass('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
