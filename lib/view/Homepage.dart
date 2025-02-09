@@ -14,7 +14,6 @@ import 'TextFieldScreen.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-
 //Show BottomSheet
   showBottomSheet() {
     Get.bottomSheet(
@@ -90,27 +89,28 @@ class HomePage extends StatelessWidget {
     );
   }
 
-
-//Show SnackBar 
+//Show SnackBar
   showSnackBar() {
-    Get.snackbar("Hii, Test", "This Is a test",
-        titleText: const Text(
-          "Hii, Test",
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 22,
-          ),
+    Get.snackbar(
+      "Hii, Test",
+      "This Is a test",
+      titleText: const Text(
+        "Hii, Test",
+        style: TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 22,
         ),
-        messageText: const Text(
-          "This is a Test message",
-          style: TextStyle(
-            fontWeight: FontWeight.w400,
-            fontSize: 18,
-          ),
+      ),
+      messageText: const Text(
+        "This is a Test message",
+        style: TextStyle(
+          fontWeight: FontWeight.w400,
+          fontSize: 18,
         ),
-        snackPosition: SnackPosition.TOP,);
+      ),
+      snackPosition: SnackPosition.TOP,
+    );
   }
-
 
 //Show Dialog
   showDialog() {
@@ -118,8 +118,7 @@ class HomePage extends StatelessWidget {
       title: "Hii,Test",
       content: const Text(
         "This is a text message",
-        style: TextStyle(
-            fontSize: 16),
+        style: TextStyle(fontSize: 16),
       ),
       confirm: ElevatedButton(
         onPressed: () {
@@ -140,8 +139,6 @@ class HomePage extends StatelessWidget {
     );
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     final Theme_Controller themeController = Get.put(Theme_Controller());
@@ -153,7 +150,7 @@ class HomePage extends StatelessWidget {
         ),
         actions: [
           IconButton(onPressed: () {
-            themeController.ToggleMode();
+            themeController.toggleMode();
           }, icon: Obx(() {
             return themeController.isDark.value
                 ? const Icon(Icons.light_mode)
@@ -175,11 +172,12 @@ class HomePage extends StatelessWidget {
               },
             ),
             ListTile(
-                leading: const Icon(Icons.do_not_disturb_on_total_silence),
-                title: const Text("Dialog"),
-                onTap: () {
-                  showDialog();
-                },),
+              leading: const Icon(Icons.do_not_disturb_on_total_silence),
+              title: const Text("Dialog"),
+              onTap: () {
+                showDialog();
+              },
+            ),
             ListTile(
               leading: const Icon(Icons.open_in_browser),
               title: const Text("BottomSheet"),
